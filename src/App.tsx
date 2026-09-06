@@ -5,14 +5,13 @@
 
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
+import {
   CheckCircle2, 
   XCircle, 
   ChevronRight, 
   RotateCcw, 
   BookOpen, 
   Trophy,
-  ExternalLink,
   Info,
   GraduationCap
 } from 'lucide-react';
@@ -268,17 +267,6 @@ export default function App() {
                       <p className="text-gray-700 leading-relaxed">{currentQuestion.explanation.commonMistakes}</p>
                     </section>
 
-                    {currentQuestion.explanation.reviewLink && (
-                      <a 
-                        href={currentQuestion.explanation.reviewLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-between p-4 bg-blue-50 text-blue-700 rounded-2xl hover:bg-blue-100 transition-colors group"
-                      >
-                        <span className="text-sm font-bold">相关语法复习</span>
-                        <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                      </a>
-                    )}
                   </div>
                 </motion.div>
               ) : (

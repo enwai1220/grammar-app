@@ -1,156 +1,55 @@
-import { Question, Difficulty, GrammarCategory } from '../types';
-
+import {Question, Difficulty, GrammarCategory} from '../types';
 export const questions: Question[] = [
-  {
-    id: '1',
-    sentence: ['', ' tired, she still finished the report.'],
-    options: [
-      { id: 'a', text: 'Although' },
-      { id: 'b', text: 'Because' },
-      { id: 'c', text: 'Unless' },
-      { id: 'd', text: 'Since' }
-    ],
-    correctAnswerId: 'a',
-    explanation: {
-      rule: 'Although 引导让步状语从句，表示“尽管”。句意为“尽管很累，她还是完成了报告”。',
-      example: 'Although it was raining, they went out for a walk.',
-      commonMistakes: '容易与 but 连用。注意：although 和 but 不能同时出现在一个句子中。',
-      reviewLink: 'https://www.bing.com/search?q=although+usage'
-    },
-    difficulty: Difficulty.Junior,
-    category: GrammarCategory.AdverbialClause
-  },
-  {
-    id: '2',
-    sentence: ['The boy ', ' is standing under the tree is my brother.'],
-    options: [
-      { id: 'a', text: 'which' },
-      { id: 'b', text: 'who' },
-      { id: 'c', text: 'whom' },
-      { id: 'd', text: 'whose' }
-    ],
-    correctAnswerId: 'b',
-    explanation: {
-      rule: 'who 引导定语从句，修饰先行词 the boy（人），且在从句中作主语。',
-      example: 'The girl who is dancing is my sister.',
-      commonMistakes: '混淆 which 和 who。which 修饰物，who 修饰人。',
-      reviewLink: 'https://www.bing.com/search?q=relative+clause+who+vs+which'
-    },
-    difficulty: Difficulty.Junior,
-    category: GrammarCategory.RelativeClause
-  },
-  {
-    id: '3',
-    sentence: ['', ' the homework, he went out to play football.'],
-    options: [
-      { id: 'a', text: 'Finish' },
-      { id: 'b', text: 'Finished' },
-      { id: 'c', text: 'Finishing' },
-      { id: 'd', text: 'To finish' }
-    ],
-    correctAnswerId: 'c',
-    explanation: {
-      rule: '现在分词（doing）作时间状语，表示动作与主句动作几乎同时发生或紧接着发生，且逻辑主语 he 与 finish 是主动关系。',
-      example: 'Hearing the news, they jumped with joy.',
-      commonMistakes: '误用过去分词 finished。finished 表示被动或完成，而此处是主动关系。',
-      reviewLink: 'https://www.bing.com/search?q=present+participle+as+adverbial'
-    },
-    difficulty: Difficulty.Middle,
-    category: GrammarCategory.NonFinite
-  },
-  {
-    id: '4',
-    sentence: ['I don\'t know ', ' he will come or not.'],
-    options: [
-      { id: 'a', text: 'if' },
-      { id: 'b', text: 'whether' },
-      { id: 'c', text: 'that' },
-      { id: 'd', text: 'when' }
-    ],
-    correctAnswerId: 'b',
-    explanation: {
-      rule: 'whether ... or not 是固定搭配，引导宾语从句。虽然 if 也可以引导宾语从句，但在与 or not 直接连用时，通常只用 whether。',
-      example: 'I wonder whether it will rain or not.',
-      commonMistakes: '在 or not 面前使用 if。',
-      reviewLink: 'https://www.bing.com/search?q=whether+vs+if+or+not'
-    },
-    difficulty: Difficulty.Middle,
-    category: GrammarCategory.NounClause
-  },
-  {
-    id: '5',
-    sentence: ['This is the house ', ' I lived ten years ago.'],
-    options: [
-      { id: 'a', text: 'which' },
-      { id: 'b', text: 'that' },
-      { id: 'c', text: 'where' },
-      { id: 'd', text: 'when' }
-    ],
-    correctAnswerId: 'c',
-    explanation: {
-      rule: 'where 引导定语从句，修饰先行词 the house（地点），且在从句中作地点状语。',
-      example: 'The school where I studied is very beautiful.',
-      commonMistakes: '误用 which。如果从句中谓语动词是不及物动词（如 live）且没有介词，则需用关系副词 where。',
-      reviewLink: 'https://www.bing.com/search?q=relative+adverb+where'
-    },
-    difficulty: Difficulty.Middle,
-    category: GrammarCategory.RelativeClause
-  },
-  {
-    id: '6',
-    sentence: ['The problem is worth ', ' again.'],
-    options: [
-      { id: 'a', text: 'discussing' },
-      { id: 'b', text: 'to discuss' },
-      { id: 'c', text: 'discussed' },
-      { id: 'd', text: 'being discussed' }
-    ],
-    correctAnswerId: 'a',
-    explanation: {
-      rule: 'be worth doing 是固定用法，意为“值得做某事”，其中 doing 用主动形式表示被动意义。',
-      example: 'The book is well worth reading.',
-      commonMistakes: '误用 be worth to do 或 be worth being done。',
-      reviewLink: 'https://www.bing.com/search?q=be+worth+doing+usage'
-    },
-    difficulty: Difficulty.Senior,
-    category: GrammarCategory.NonFinite
-  },
-  {
-    id: '7',
-    sentence: ['He spoke so fast ', ' I couldn\'t follow him.'],
-    options: [
-      { id: 'a', text: 'that' },
-      { id: 'b', text: 'as' },
-      { id: 'c', text: 'than' },
-      { id: 'd', text: 'which' }
-    ],
-    correctAnswerId: 'a',
-    explanation: {
-      rule: 'so...that... 引导结果状语从句，意为“如此...以至于...”。',
-      example: 'She was so tired that she fell asleep immediately.',
-      commonMistakes: '混淆 so...that 和 such...that。so 修饰形容词/副词，such 修饰名词。',
-      reviewLink: 'https://www.bing.com/search?q=so+that+result+clause'
-    },
-    difficulty: Difficulty.Junior,
-    category: GrammarCategory.AdverbialClause
-  },
-  {
-    id: '8',
-    sentence: ['I will go to the park if it ', ' tomorrow.'],
-    options: [
-      { id: 'a', text: 'won\'t rain' },
-      { id: 'b', text: 'doesn\'t rain' },
-      { id: 'c', text: 'didn\'t rain' },
-      { id: 'd', text: 'isn\'t raining' }
-    ],
-    correctAnswerId: 'b',
-    explanation: {
-      rule: '在 if 引导的条件状语从句中，遵循“主将从现”原则，即主句用将来时，从句用一般现在时表将来。',
-      example: 'If he comes, I will tell him.',
-      commonMistakes: '从句也使用 will (won\'t rain)。',
-      reviewLink: 'https://www.bing.com/search?q=if+clause+present+tense+for+future'
-    },
-    difficulty: Difficulty.Junior,
-    category: GrammarCategory.AdverbialClause
-  }
+  {id:'1',sentence:['She ',' to school every day.'],options:[{id:'a',text:'go'},{id:'b',text:'goes'},{id:'c',text:'going'},{id:'d',text:'went'}],correctAnswerId:'b',explanation:{rule:'主语是第三人称单数 She，一般现在时动词加 -s',example:'He goes to school at 7 am.',commonMistakes:'第三人称单数忘记加 s'},difficulty:Difficulty.Junior,category:GrammarCategory.Tense},
+  {id:'2',sentence:['They ',' football yesterday afternoon.'],options:[{id:'a',text:'play'},{id:'b',text:'plays'},{id:'c',text:'played'},{id:'d',text:'playing'}],correctAnswerId:'c',explanation:{rule:'yesterday 表示过去时间，用一般过去时',example:'I watched a movie last night.',commonMistakes:'过去时间忘记用过去式'},difficulty:Difficulty.Junior,category:GrammarCategory.Tense},
+  {id:'3',sentence:['Look! The children ',' in the park.'],options:[{id:'a',text:'play'},{id:'b',text:'plays'},{id:'c',text:'are playing'},{id:'d',text:'played'}],correctAnswerId:'c',explanation:{rule:'Look! 提示正在发生的动作，用现在进行时',example:'Listen! Someone is singing.',commonMistakes:'忘记用 be + doing 结构'},difficulty:Difficulty.Junior,category:GrammarCategory.Tense},
+  {id:'4',sentence:['We ',' each other since 2010.'],options:[{id:'a',text:'know'},{id:'b',text:'knew'},{id:'c',text:'have known'},{id:'d',text:'are knowing'}],correctAnswerId:'c',explanation:{rule:'since 2010 表示从过去持续到现在，用现在完成时',example:'I have lived here since 2015.',commonMistakes:'since 与一般过去时混淆'},difficulty:Difficulty.Middle,category:GrammarCategory.Tense},
+  {id:'5',sentence:['He ',' to Beijing three times.'],options:[{id:'a',text:'goes'},{id:'b',text:'went'},{id:'c',text:'has been'},{id:'d',text:'has gone'}],correctAnswerId:'c',explanation:{rule:'three times 表示经历，用 has been to（去过已回）',example:'She has been to Shanghai twice.',commonMistakes:'has been to 和 has gone to 混淆'},difficulty:Difficulty.Middle,category:GrammarCategory.Tense},
+  {id:'6',sentence:['I ',' my homework at 8 pm last night.'],options:[{id:'a',text:'do'},{id:'b',text:'did'},{id:'c',text:'was doing'},{id:'d',text:'have done'}],correctAnswerId:'c',explanation:{rule:'at 8 pm last night 是过去具体时间点，用过去进行时',example:'She was cooking when I arrived.',commonMistakes:'过去进行时忘记 be 动词'},difficulty:Difficulty.Middle,category:GrammarCategory.Tense},
+  {id:'7',sentence:['If it ',' tomorrow, we will stay at home.'],options:[{id:'a',text:'rains'},{id:'b',text:'rained'},{id:'c',text:'will rain'},{id:'d',text:'is raining'}],correctAnswerId:'a',explanation:{rule:'if 条件状语从句用一般现在时表将来（主将从现）',example:'If he comes, I will tell you.',commonMistakes:'从句也使用 will'},difficulty:Difficulty.Junior,category:GrammarCategory.AdverbialClause},
+  {id:'8',sentence:['The book ',' by Lu Xun.'],options:[{id:'a',text:'wrote'},{id:'b',text:'is written'},{id:'c',text:'was written'},{id:'d',text:'writes'}],correctAnswerId:'c',explanation:{rule:'书是被鲁迅写的，过去被动语态 was written',example:'The house was built in 2000.',commonMistakes:'被动语态忘记 be + 过去分词'},difficulty:Difficulty.Middle,category:GrammarCategory.Voice},
+  {id:'9',sentence:['We have class ',' 8:00 ',' the morning.'],options:[{id:'a',text:'at; in'},{id:'b',text:'in; at'},{id:'c',text:'at; on'},{id:'d',text:'on; in'}],correctAnswerId:'a',explanation:{rule:'时间点前用 at，泛指上午/下午/晚上用 in',example:'I get up at 6:00 in the morning.',commonMistakes:'at 和 in 混淆'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'10',sentence:['He was born ',' June 1st, 2010.'],options:[{id:'a',text:'in'},{id:'b',text:'on'},{id:'c',text:'at'},{id:'d',text:'by'}],correctAnswerId:'b',explanation:{rule:'具体某一天（6月1日）前用 on',example:'I was born on March 5th.',commonMistakes:'具体日期也用 in'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'11',sentence:['She is good ',' playing the piano.'],options:[{id:'a',text:'at'},{id:'b',text:'in'},{id:'c',text:'on'},{id:'d',text:'for'}],correctAnswerId:'a',explanation:{rule:'be good at 是固定搭配，表示"擅长"',example:'He is good at math.',commonMistakes:'误用 be good in'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'12',sentence:['I am looking forward ',' your reply.'],options:[{id:'a',text:'to'},{id:'b',text:'for'},{id:'c',text:'at'},{id:'d',text:'with'}],correctAnswerId:'a',explanation:{rule:'look forward to 是固定搭配，to 是介词',example:'I look forward to seeing you.',commonMistakes:'to 后面误加动词原形'},difficulty:Difficulty.Middle,category:GrammarCategory.Conjunction},
+  {id:'13',sentence:['There is ',' apple on the table.'],options:[{id:'a',text:'a'},{id:'b',text:'an'},{id:'c',text:'the'},{id:'d',text:'/'}],correctAnswerId:'b',explanation:{rule:'apple 以元音音素开头，用 an',example:'an orange, an hour',commonMistakes:'apple 是元音开头却用 a'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'14',sentence:['He is ',' honest boy.'],options:[{id:'a',text:'a'},{id:'b',text:'an'},{id:'c',text:'the'},{id:'d',text:'/'}],correctAnswerId:'b',explanation:{rule:'honest 的 h 不发音，以元音音素开头，用 an',example:'an hour, an honor',commonMistakes:'看到 h 开头就选 a'},difficulty:Difficulty.Middle,category:GrammarCategory.Conjunction},
+  {id:'15',sentence:['',' sun rises in the east.'],options:[{id:'a',text:'A'},{id:'b',text:'An'},{id:'c',text:'The'},{id:'d',text:'/'}],correctAnswerId:'c',explanation:{rule:'sun 是独一无二的事物，前用 the',example:'The moon is very bright tonight.',commonMistakes:'独一无二的事物忘记加 the'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'16',sentence:['I have ',' cat. ',' cat is white.'],options:[{id:'a',text:'a; A'},{id:'b',text:'a; The'},{id:'c',text:'the; A'},{id:'d',text:'an; The'}],correctAnswerId:'b',explanation:{rule:'首次提到用 a，再次提到用 the',example:'I saw a dog. The dog was running.',commonMistakes:'第一次提到也用 the'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'17',sentence:['There are two ',' in the room.'],options:[{id:'a',text:'boy'},{id:'b',text:'boys'},{id:'c',text:'boyes'},{id:'d',text:'boies'}],correctAnswerId:'b',explanation:{rule:'two 后用复数形式，直接在词尾加 s',example:'three books, five pens',commonMistakes:'以辅音+y 结尾变 y 为 i 加 es'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'18',sentence:['Would you like ',' coffee?'],options:[{id:'a',text:'some'},{id:'b',text:'any'},{id:'c',text:'many'},{id:'d',text:'a few'}],correctAnswerId:'a',explanation:{rule:'希望得到肯定回答时，疑问句用 some',example:'Would you like some water?',commonMistakes:'疑问句一律用 any'},difficulty:Difficulty.Middle,category:GrammarCategory.Conjunction},
+  {id:'19',sentence:['This book is ','. I bought it yesterday.'],options:[{id:'a',text:'my'},{id:'b',text:'mine'},{id:'c',text:'me'},{id:'d',text:'I'}],correctAnswerId:'b',explanation:{rule:'后面没有名词，用名词性物主代词 mine',example:'This pen is mine.',commonMistakes:'形容词性和名词性物主代词混淆'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'20',sentence:['There ',' some milk in the glass.'],options:[{id:'a',text:'is'},{id:'b',text:'are'},{id:'c',text:'have'},{id:'d',text:'has'}],correctAnswerId:'a',explanation:{rule:'milk 是不可数名词，用 There is',example:'There is some water in the bottle.',commonMistakes:'不可数名词用 There are'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'21',sentence:['This book is ',' than that one.'],options:[{id:'a',text:'interesting'},{id:'b',text:'more interesting'},{id:'c',text:'most interesting'},{id:'d',text:'interestinger'}],correctAnswerId:'b',explanation:{rule:'多音节形容词比较级前加 more',example:'She is more beautiful than her sister.',commonMistakes:'多音节词直接加 -er'},difficulty:Difficulty.Middle,category:GrammarCategory.Conjunction},
+  {id:'22',sentence:['She runs ',' in her class.'],options:[{id:'a',text:'fast'},{id:'b',text:'faster'},{id:'c',text:'fastest'},{id:'d',text:'the fastest'}],correctAnswerId:'d',explanation:{rule:'in her class 表示范围，用最高级',example:'He is the tallest in our class.',commonMistakes:'最高级忘记加 the'},difficulty:Difficulty.Middle,category:GrammarCategory.Conjunction},
+  {id:'23',sentence:['He is as ',' as his brother.'],options:[{id:'a',text:'tall'},{id:'b',text:'taller'},{id:'c',text:'tallest'},{id:'d',text:'more tall'}],correctAnswerId:'a',explanation:{rule:'as...as 中间用形容词原级',example:'She is as smart as her friend.',commonMistakes:'as...as 中间用比较级'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'24',sentence:['She sings ','.'],options:[{id:'a',text:'good'},{id:'b',text:'well'},{id:'c',text:'better'},{id:'d',text:'best'}],correctAnswerId:'b',explanation:{rule:'动词 sing 后用副词 well 修饰',example:'He runs fast.',commonMistakes:'动词后误用形容词'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'25',sentence:['You ',' finish your homework first.'],options:[{id:'a',text:'can'},{id:'b',text:'may'},{id:'c',text:'must'},{id:'d',text:'need'}],correctAnswerId:'c',explanation:{rule:'must 表示"必须"，语气最强',example:'You must wear a seatbelt.',commonMistakes:'must 和 need 混淆'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'26',sentence:['',' I ask you a question?'],options:[{id:'a',text:'Must'},{id:'b',text:'May'},{id:'c',text:'Need'},{id:'d',text:'Should'}],correctAnswerId:'b',explanation:{rule:'May I...? 表示礼貌请求',example:'May I come in?',commonMistakes:'用 Can I 虽然也对但 May I 更礼貌'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'27',sentence:['He ',' be at home. The light is on.'],options:[{id:'a',text:'can'},{id:'b',text:'must'},{id:'c',text:'need'},{id:'d',text:'dare'}],correctAnswerId:'b',explanation:{rule:'灯亮着，推测"一定在家"用 must',example:'She must be at school now.',commonMistakes:'肯定推测用 can'},difficulty:Difficulty.Middle,category:GrammarCategory.Conjunction},
+  {id:'28',sentence:['You ',' cross the street when the light is red.'],options:[{id:'a',text:'mustn_t'},{id:'b',text:'needn_t'},{id:'c',text:'do not have to'},{id:'d',text:'can_t'}],correctAnswerId:'a',explanation:{rule:'红灯时"禁止"过马路，用 mustn_t',example:'You must not smoke here.',commonMistakes:'must not 和 need not 混淆'},difficulty:Difficulty.Middle,category:GrammarCategory.Conjunction},
+  {id:'29',sentence:['I like apples ',' oranges.'],options:[{id:'a',text:'and'},{id:'b',text:'but'},{id:'c',text:'or'},{id:'d',text:'so'}],correctAnswerId:'a',explanation:{rule:'并列关系用 and（和）',example:'I like reading and writing.',commonMistakes:'and 和 but 混淆'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'30',sentence:['He is young, ',' he knows a lot.'],options:[{id:'a',text:'and'},{id:'b',text:'but'},{id:'c',text:'or'},{id:'d',text:'so'}],correctAnswerId:'b',explanation:{rule:'年龄小但懂得多，表转折用 but',example:'She is tired but happy.',commonMistakes:'but 和 and 混淆'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'31',sentence:['Hurry up, ',' you will be late.'],options:[{id:'a',text:'and'},{id:'b',text:'but'},{id:'c',text:'or'},{id:'d',text:'so'}],correctAnswerId:'c',explanation:{rule:'or 表示"否则"，常用于警告',example:'Study hard, or you will fail.',commonMistakes:'or 和 and 混淆'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'32',sentence:['',' he is tired, he still works hard.'],options:[{id:'a',text:'Because'},{id:'b',text:'Although'},{id:'c',text:'If'},{id:'d',text:'When'}],correctAnswerId:'b',explanation:{rule:'虽然累但还努力，让步状语从句用 Although',example:'Although it rained, we went out.',commonMistakes:'although 和 because 混淆'},difficulty:Difficulty.Middle,category:GrammarCategory.AdverbialClause},
+  {id:'33',sentence:['I want ',' a doctor when I grow up.'],options:[{id:'a',text:'be'},{id:'b',text:'to be'},{id:'c',text:'being'},{id:'d',text:'been'}],correctAnswerId:'b',explanation:{rule:'want to do 是不定式作宾语',example:'I want to learn English.',commonMistakes:'want 后面直接加动词原形'},difficulty:Difficulty.Junior,category:GrammarCategory.NonFinite},
+  {id:'34',sentence:['He made me ',' there for a long time.'],options:[{id:'a',text:'wait'},{id:'b',text:'to wait'},{id:'c',text:'waiting'},{id:'d',text:'waited'}],correctAnswerId:'a',explanation:{rule:'make sb. do 是使役动词结构，省略 to',example:'She made me laugh.',commonMistakes:'make 后面加 to do'},difficulty:Difficulty.Middle,category:GrammarCategory.NonFinite},
+  {id:'35',sentence:['I enjoy ',' music in my free time.'],options:[{id:'a',text:'listen'},{id:'b',text:'to listen'},{id:'c',text:'listening'},{id:'d',text:'listened'}],correctAnswerId:'c',explanation:{rule:'enjoy doing 是固定搭配',example:'He enjoys reading books.',commonMistakes:'enjoy 后面加动词原形'},difficulty:Difficulty.Junior,category:GrammarCategory.NonFinite},
+  {id:'36',sentence:['It is important ',' English well.'],options:[{id:'a',text:'learn'},{id:'b',text:'to learn'},{id:'c',text:'learning'},{id:'d',text:'learned'}],correctAnswerId:'b',explanation:{rule:'It is + adj. + to do 是不定式作真正主语',example:'It is nice to meet you.',commonMistakes:'It is important 后面直接加动词原形'},difficulty:Difficulty.Middle,category:GrammarCategory.NonFinite},
+  {id:'37',sentence:['My mother told me ',' late.'],options:[{id:'a',text:'not be'},{id:'b',text:'not to be'},{id:'c',text:'to not be'},{id:'d',text:'do not be'}],correctAnswerId:'b',explanation:{rule:'tell sb. not to do 是 tell sb. to do 的否定形式',example:'He told me not to go.',commonMistakes:'否定形式忘记加 not'},difficulty:Difficulty.Middle,category:GrammarCategory.NonFinite},
+  {id:'38',sentence:['I saw him ',' basketball on the playground.'],options:[{id:'a',text:'play'},{id:'b',text:'to play'},{id:'c',text:'playing'},{id:'d',text:'played'}],correctAnswerId:'c',explanation:{rule:'see sb. doing 表示看到动作正在进行',example:'I saw her crossing the street.',commonMistakes:'see sb. do 和 see sb. doing 混淆'},difficulty:Difficulty.Middle,category:GrammarCategory.NonFinite},
+  {id:'39',sentence:['I have to practice ',' the piano every day.'],options:[{id:'a',text:'play'},{id:'b',text:'to play'},{id:'c',text:'playing'},{id:'d',text:'played'}],correctAnswerId:'c',explanation:{rule:'practice doing 是固定搭配',example:'She practices dancing every day.',commonMistakes:'practice 后面加 to do'},difficulty:Difficulty.Middle,category:GrammarCategory.NonFinite},
+  {id:'40',sentence:['I would like ',' a cup of tea.'],options:[{id:'a',text:'have'},{id:'b',text:'to have'},{id:'c',text:'having'},{id:'d',text:'had'}],correctAnswerId:'b',explanation:{rule:'would like to do 是固定搭配',example:'I would like to go swimming.',commonMistakes:'would like 后面直接加动词原形'},difficulty:Difficulty.Junior,category:GrammarCategory.NonFinite},
+  {id:'41',sentence:['The boy ',' is standing there is my brother.'],options:[{id:'a',text:'which'},{id:'b',text:'who'},{id:'c',text:'whom'},{id:'d',text:'whose'}],correctAnswerId:'b',explanation:{rule:'who 引导定语从句，修饰先行词 the boy（人）',example:'The girl who is dancing is my sister.',commonMistakes:'who 和 which 混淆'},difficulty:Difficulty.Middle,category:GrammarCategory.RelativeClause},
+  {id:'42',sentence:['I do not know ',' he will come or not.'],options:[{id:'a',text:'if'},{id:'b',text:'whether'},{id:'c',text:'that'},{id:'d',text:'when'}],correctAnswerId:'b',explanation:{rule:'whether ... or not 是固定搭配',example:'I wonder whether it will rain or not.',commonMistakes:'or not 前误用 if'},difficulty:Difficulty.Middle,category:GrammarCategory.NounClause},
+  {id:'43',sentence:['This is the house ',' I lived ten years ago.'],options:[{id:'a',text:'which'},{id:'b',text:'that'},{id:'c',text:'where'},{id:'d',text:'when'}],correctAnswerId:'c',explanation:{rule:'where 引导定语从句，修饰先行词 the house（地点）',example:'The school where I studied is beautiful.',commonMistakes:'where 和 which 混淆'},difficulty:Difficulty.Middle,category:GrammarCategory.RelativeClause},
+  {id:'44',sentence:['By the time we arrived, the film ',' already ','.'],options:[{id:'a',text:'has; started'},{id:'b',text:'had; started'},{id:'c',text:'was; starting'},{id:'d',text:'did; start'}],correctAnswerId:'b',explanation:{rule:'by the time + 过去时间，用过去完成时',example:'By 9 pm, I had finished my homework.',commonMistakes:'过去完成时和一般过去时混淆'},difficulty:Difficulty.Senior,category:GrammarCategory.Tense},
+  {id:'45',sentence:['She taught ',' English.'],options:[{id:'a',text:'her'},{id:'b',text:'hers'},{id:'c',text:'herself'},{id:'d',text:'she'}],correctAnswerId:'c',explanation:{rule:'teach oneself 表示"自学"',example:'He taught himself to play guitar.',commonMistakes:'用 teach her 表示自学'},difficulty:Difficulty.Middle,category:GrammarCategory.Conjunction},
+  {id:'46',sentence:['The weather is getting ',' and ','.'],options:[{id:'a',text:'cold; cold'},{id:'b',text:'colder; colder'},{id:'c',text:'coldest; coldest'},{id:'d',text:'more cold; more cold'}],correctAnswerId:'b',explanation:{rule:'比较级 + and + 比较级表"越来越..."',example:'It is getting hotter and hotter.',commonMistakes:'用原级替代比较级'},difficulty:Difficulty.Middle,category:GrammarCategory.Conjunction},
+  {id:'47',sentence:['She has been happy ',' she got the news.'],options:[{id:'a',text:'since'},{id:'b',text:'for'},{id:'c',text:'before'},{id:'d',text:'after'}],correctAnswerId:'a',explanation:{rule:'since 表示"自从...以来"，与完成时连用',example:'I have been here since 2010.',commonMistakes:'since 和 for 混淆'},difficulty:Difficulty.Middle,category:GrammarCategory.Conjunction},
+  {id:'48',sentence:['I was reading ',' she was watching TV.'],options:[{id:'a',text:'when'},{id:'b',text:'while'},{id:'c',text:'as soon as'},{id:'d',text:'after'}],correctAnswerId:'b',explanation:{rule:'两个延续性动作同时进行用 while',example:'He was singing while I was dancing.',commonMistakes:'while 和 when 混淆'},difficulty:Difficulty.Middle,category:GrammarCategory.Conjunction},
+  {id:'49',sentence:['He is the ',' boy in our class.'],options:[{id:'a',text:'tall'},{id:'b',text:'taller'},{id:'c',text:'tallest'},{id:'d',text:'more tall'}],correctAnswerId:'c',explanation:{rule:'in our class 表示范围，用最高级',example:'She is the best student.',commonMistakes:'最高级忘记加 the'},difficulty:Difficulty.Junior,category:GrammarCategory.Conjunction},
+  {id:'50',sentence:['The children enjoyed ',' at the party.'],options:[{id:'a',text:'them'},{id:'b',text:'their'},{id:'c',text:'themselves'},{id:'d',text:'theirs'}],correctAnswerId:'c',explanation:{rule:'enjoy oneself 表示"玩得开心"',example:'We enjoyed ourselves at the park.',commonMistakes:'enjoy oneself 中 oneself 用错'},difficulty:Difficulty.Middle,category:GrammarCategory.Conjunction},
+  {id:'51',sentence:['He spoke so fast ',' I could not follow him.'],options:[{id:'a',text:'that'},{id:'b',text:'as'},{id:'c',text:'than'},{id:'d',text:'which'}],correctAnswerId:'a',explanation:{rule:'so...that... 引导结果状语从句',example:'She was so tired that she fell asleep.',commonMistakes:'so...that 和 such...that 混淆'},difficulty:Difficulty.Junior,category:GrammarCategory.AdverbialClause},
+  {id:'52',sentence:['I will go to the park if it ',' tomorrow.'],options:[{id:'a',text:'will not rain'},{id:'b',text:'does not rain'},{id:'c',text:'did not rain'},{id:'d',text:'is not raining'}],correctAnswerId:'b',explanation:{rule:'if 条件状语从句遵循"主将从现"',example:'If he comes, I will tell him.',commonMistakes:'从句也使用 will'},difficulty:Difficulty.Junior,category:GrammarCategory.AdverbialClause},
 ];
